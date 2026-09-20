@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--01.thẻ video......................................-->
+    <!--   + <video><video> dùng để chèn video     
+           + trong thẻ video  có thẻ soure để chứa đường dẫn phải video
+           + controls : hiển thị thanh điều khiển (bật , tạm dừng, âm lượng )
+           + loop : lặp lại video 
+           + autoplay: tự động phát video
+           + muted : tắt tiếng  -->
+
+    <video width="500px" controls loop autoplay>
+        <source src="video/video.mp4" type="video/mp4">
+    </video>
+    <!--02.thẻ audio.................................
+        + controls: thuộc tính điều khiển như là bật , tạm dừng , âm lượng 
+        + loop: lặp lại audio -->
+    <audio controls loop>
+        <source src="audio/audio.m4a">
+    </audio>
+    <!-- 03.thẻ table ..............................
+        +  <table></table> chèn bảng
+        +  colspan : tạo o mở rộng trên nhiều cột 
+        +  rowspan : tạo ô kẻ dài trên nhiều hàng -->
+
+    <table>
+        <thead>
+            <tr>
+                <th>hàng 1 cột 1 </th> <!-- th ; tiêu đề -->
+                <th>hàng 1 cột 2</th>
+                <th>hàng 1 cột 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+
+                <td>hàng 2 cột 1</td><!--td: dữ liệu-->
+                <td>hàng 2 cột 2</td>
+                <td>hàng 2 cột 3</td>
+
+            </tr>
+        </tbody>
+    </table>
+
+    <table>
+        <thead>
+            <tr>
+                <th >Hàng 1 cột 1 </th>
+                <th>Hàng 1 cột 2 </th>
+                <th>Hàng 1 cột 3 </th>
+                <th>Hàng 1 cột 4 </th>
+                <th>Hàng 1 cột 5 </th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+
+                <td rowspan="2">Hàng 2 cột 1 </td>
+                <td>Hàng 2 cột 2</td>
+                <td>Hàng 2 cột 3 </td>
+                <td>Hàng 2 cột 4 </td>
+                <td>Hàng 2 cột 5 </td>
+            </tr>
+            <tr>
+                
+                <td>Hàng 3 cột 2 </td>
+                <td>Hàng 3 cột 3 </td>
+                <td>Hàng 3 cột 4 </td>
+                <td>Hàng 3 cột 5 </td>
+            </tr>
+        </tbody>
+
+    </table>
+</body>
+
+</html>
