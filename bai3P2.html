@@ -1,0 +1,84 @@
+<!-- 1 .phân biệt block và inline 
+ block ( khối  )
+ +, luôn luôn bắt đầu trên một dòng mới 
++, tự động thêm khoảng trống ở trước và sau phần tử 
++, danh sách một số thẻ dạng block : <h1> , <h2> , <h3> , <h4> , .... <ol> <li> <table> <header> <nav> <main> <footer> <aside>
+    <form> <div>-->
+
+<!-- thẻ inline (nội tuyến - trong hàng )
+ - ở trên cùng 1 hàng 
+ - hết chiều rộng màn hình sẽ tự xuống hàng mới
+ - danh sách một số thẻ dạng inline <a> <b> <i> <sub>
+    <sup> <del> <mark> <img> <frame> .......-->
+
+<!-- phần tử kiểu inline không được chứa phần tử kiểu block 
+    phần tử kiểu block được chứa phần tử kiểu block , kiểu inline
+    phân tử kiểu inline chỉ được chứa các phần tử kiểu inline-->
+
+<!-- thẻ form ...................
+ - là một biễu mẫu html được sử dụng để thu thập thông tin của người dùng 
+ thông tin của người dùng sẽ được gửi đến backend để xử lý 
+ vd 
+ <form>
+    <input name ="hoten"/>
+    <button>Gửi</buuton>
+    </form>-->
+<!-- thuộc tính của thẻ form................................
+  1. action : xác định nơi mà dữ liệu của biểu mẫu sẽ được gửi đến 
+    <form action="đường link do backend tạo để hứng data">
+  2.target : chỉ định nơi hiển thị phản hồi nhận được sau khi gửi biểu mẫu 
+   + target="_self" :Mặc định phản hồi hiển thị ở tab hiện tại 
+   + target="_blank":phản hồi hiển thị ở tab mới
+   3.autocomplete (tự động điền ), trình duyệt sẽ gợi ý các giá trị dựa trên các giá trị mà người dùng nhập trước đó  -->
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="https://www.w3schools.com/w3css/w3css_templates.asp" target="_blank" autocomplete="on">
+        <input name="hoten" /> <!-- mục đích của thẻ input để nhập đc đoạn văn mặc định chỉ 1 hàng -->
+        <button>Gửi</button>
+    </form>
+    <!-- thẻ label để xác định nhãn cho phần tử tương ứng trong biểu mẫu 
+     để người dùng hiểu hơn về phần tử đó -->
+     <form>
+       <div>
+        <label for="fullname">Họ tên:</label>
+        <input name="hoten" id="fullname" placehodlder="nhập nội dung"/> <!-- for và id để  focus vào ô input -->
+       </div>
+       <div>
+       <label>email:</label>
+       <input name="email" placehodlder="phantang@gmail.com"/> 
+       </div>
+       <button>Gửi</button>
+     </form>
+
+     <!-- thẻ select ....................................
+      + thẻ selcet hiển thị danh sách dạng thả xuống 
+      + các thẻ option là các tùy chọn người dùng có thể chọn 
+      + theo mặc định option đầu tiên trong danh sách sẽ được chọn 
+      + để thay đổi mặc định lựa chọn , thêm thuộc tính selected vào <option> muốn đặt mặc định-->
+    <form>
+        <label for=""gioitinh>gioi tinh :</label>
+        <select name="gioitinh" id="gioitinh">
+            <option value="nam">nam</option>
+            <option value="nu" selected>nữ</option> <!-- thêm selected thì lựa chọn nữ sẽ là mặc định -->
+            <option value="khac">khác</option>
+        </select>
+    </form>
+<!-- thẻ textarea : dùng để nhập nhiều dòng 
+ + thuộc tính :
+ + row : chỉ định số dòng hiển thị 
+ + cols: chỉ định độ rộng hiển thị -->
+ <form>
+    <label for="note">Ghi chú :</label>
+    <textarea id="note" name="ghichu" rows="3" cols="10" placehodlder="nhập nội dung"></textarea> <!-- placeholder : hiển thị gợi ý-->
+ </form>
+</body>
+
+</html>
