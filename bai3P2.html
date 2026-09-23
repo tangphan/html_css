@@ -46,39 +46,81 @@
     </form>
     <!-- thẻ label để xác định nhãn cho phần tử tương ứng trong biểu mẫu 
      để người dùng hiểu hơn về phần tử đó -->
-     <form>
-       <div>
-        <label for="fullname">Họ tên:</label>
-        <input name="hoten" id="fullname" placehodlder="nhập nội dung"/> <!-- for và id để  focus vào ô input -->
-       </div>
-       <div>
-       <label>email:</label>
-       <input name="email" placehodlder="phantang@gmail.com"/> 
-       </div>
-       <button>Gửi</button>
-     </form>
+    <form>
+        <div>
+            <label for="fullname">Họ tên:</label>
+            <input name="hoten" id="fullname" placehodlder="nhập nội dung" /> <!-- for và id để  focus vào ô input -->
+        </div>
+        <div>
+            <label>email:</label>
+            <input name="email" placehodlder="phantang@gmail.com" />
+        </div>
+        <div>
+            <label for="tuoi">Tuổi:</label>
+            <input type="number" name="tuoi" id="tuoi" /> <!-- nhập số -->
+        </div>
+        <div>
+            <label for="ngayden">Ngày đến </label>
+            <input type="date" name="ngayden" id="ngayden" /> <!-- nhập ngày tháng -->
+        </div>
+        <div>
+            <label for="gioden">Giờ đến </label>
+            <input type="time" name="gioden" id="gioden" /> <!--nhập giờ -->
+            <!-- type=datetime-local : dùng để nhập ngày tháng năm và giờ phút -->
+        </div>
+        <!-- input type= fil: dùng để tải file lên -->
+        <div>
+            <label for="anhcccd">Ảnh cccd</label>
+            <input type="file" name="anhcccd" id="anhcccd" accept="image/*" /> <!-- accept="image/*" : chấp nhận tất cả các loại ảnh
+            +,accept=image/png : chấp nhận ảnh png hoặc accept="video/*"-->
+        </div>
+        <button>Gửi</button>
+    </form>
 
-     <!-- thẻ select ....................................
+    <!-- thẻ select ....................................
       + thẻ selcet hiển thị danh sách dạng thả xuống 
       + các thẻ option là các tùy chọn người dùng có thể chọn 
       + theo mặc định option đầu tiên trong danh sách sẽ được chọn 
       + để thay đổi mặc định lựa chọn , thêm thuộc tính selected vào <option> muốn đặt mặc định-->
     <form>
-        <label for=""gioitinh>gioi tinh :</label>
+        <label for="" gioitinh>gioi tinh :</label>
         <select name="gioitinh" id="gioitinh">
             <option value="nam">nam</option>
             <option value="nu" selected>nữ</option> <!-- thêm selected thì lựa chọn nữ sẽ là mặc định -->
             <option value="khac">khác</option>
         </select>
     </form>
-<!-- thẻ textarea : dùng để nhập nhiều dòng 
+    <!-- thẻ textarea : dùng để nhập nhiều dòng 
  + thuộc tính :
  + row : chỉ định số dòng hiển thị 
  + cols: chỉ định độ rộng hiển thị -->
- <form>
-    <label for="note">Ghi chú :</label>
-    <textarea id="note" name="ghichu" rows="3" cols="10" placehodlder="nhập nội dung"></textarea> <!-- placeholder : hiển thị gợi ý-->
- </form>
+    <form method="GET" action="https://www.w3schools.com/w3css/w3css_templates.asp" target="_blank">
+        <!--method = get nối name và value  vào url -->
+        <label for="note">Ghi chú :</label>
+        <textarea id="note" name="ghichu" rows="3" cols="10" placehodlder="nhập nội dung"></textarea>
+        <!-- placeholder : hiển thị gợi ý-->
+        <!--input type="checkbox" : các hộp kiểm cho phép người dùng chọn không hoặc nhiều tùy chọn trong số các lựa chọn-->
+        <p>chọn những ngôn ngữ bạn biết </p>
+        <label for="c">Ngôn ngữ c </label>
+        <input type="checkbox" name="language" id="c">
+        <br>
+        <label for="python">python</label>
+        <input type="checkbox" name="language" id="python" />
+        <br>
+        <label for="java">java</label>
+        <input type="checkbox" name="language" id="java" />
+        <!-- input type=radio : khác checkbox là chỉ đc chọn 1 lựa chọn-->
+    </form>
+    <!-- method ..............................
+     +, thuộc tính method xác định phương thức được sử dụng khi gửi dữ liệu biểu mẫu 
+     +, có hai phương thức get và post
+     +, phương thức get :
+      - nối dữ kiệu biểu mẫu vào url , theo cặp name/value
+      - không bao giờ sử dụng get để gửi dữ liệu bảo mật . như tài khoản , mật khẩu 
+      - độ dài của url bị giới hạn (2048 kí tự )
+      +, phương thức post: dữ liệu biểu mẫu đã guiowr không được hiển thị trong url
+      +, post không có giới hạn về kích thước và có thể được sử dụng để gửi một lượng lớn dữ liệu -->
+
 </body>
 
 </html>
