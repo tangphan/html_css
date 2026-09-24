@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        div {
+            font-size: 40px;
+            border: 5px solid red;
+            width: 500px;
+            height: 400px;
+            font-weight: 700;
+            /* background image : mặc định lấy góc trên bên trái nên có thể bị cắt xén*/
+            background-image: url("image/anhnen.jpg");
+            /*background-size : để thiết lập kích thước hình nền */
+            /* background-size: 500px 200px;  rộng 500 cao 200 lặp lại cho đến khi lấp hết hộp */
+            background-size: contain;
+            /* đúng tỉ lệ không bị thừa thiếu nhưng vẫn có thể lặp lại */
+            /* background-size :cover ; cắt ảnh theo đúng tir lệ box phần còn lại bỏ đi */
+            /* background-repeat : để thiết lập hình nền có lặp lại hay không */
+            background-repeat: no-repeat;
+            /*background-position :  để thiết lập vị trí cửa hình nền so với phần tử */
+            /* background-position:bottom right;*/
+            /* bottom -top : căn theo trục y dưới hay trên 
+          right-left: căn theo trục x phải hay trái
+          center :giữa  */
+            background-position: center center;
+            /*text-align : căn lề cho văn bản
+        +, text-align: left : căn trái 
+        +, text-align:right:căn phải 
+        +,text-align:center : căn giữa
+        +, text-align:justify: căn đều hai bên lề  */
+        }
+
+        p {
+            text-align: center;
+            text-transform: capitalize;
+
+        }
+
+        /* thuộc tính text-transform : để định dạng viết hoa , viết thường cho văn bản 
+        text-transform : uppercase : viết hoa tất cả các chữ 
+        text-transform : capitalize : viết hoa chữ đầu ,mỗi từ 
+        text-transform : lowercase : viết thường tất cả các chữ */
+
+        /* thuộc tính font-family : để chỉ định loại font chữ được sử dụng cho văn bản */
+        /* thuộc tính font-style : để chỉ định văn bản có in nghiêng hay không */
+        /* thuộc tính font-weight : để chỉ định độ dày của văn bản 
+          các giá trị : 100 200 300 400 500 600 ...... */
+        /*thuộc tính font-size : để chỉ kích cỡ của chữ*/
+        @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playwrite+BE+WAL+Guides&family=Playwrite+CU+Guides&display=swap');
+        h1{
+            font-family: "Be Vietnam Pro", sans-serif;
+        }
+        h2{
+            font-family: "Playwrite BE WAL Guides", cursive;
+            font-weight :100
+        }
+        h3{
+            font-family: "Playwrite CU Guides", cursive;
+            font-size :18px
+        }
+    </style>
+    <div>
+        Box 1
+    </div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur dolores, laboriosam, voluptatum
+        repellat ducimus beatae suscipit doloribus non quam expedita facilis, amet debitis optio aut! Et perferendis
+        odio ratione iusto, eaque temporibus ad saepe error ipsum, voluptatem expedita cupiditate. Qui!</p>
+    <h1>Nội dung văn bản 1</h1>
+    <h2>Nội dung văn bản 2</h2>
+    <h3>Nội dung văn bản 3</h3>
+</body>
+
+</html>
