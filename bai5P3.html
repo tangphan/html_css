@@ -1,0 +1,104 @@
+<!--CÁC loại selectors (bộ chọn ) 
+ +, bộ chọn dùng để chọn đúng các phần tử hrml đang cần thêm css
+ +, bộ chọn được chia thành 5 nhóm :
+ - Simple selectors ( bộ chọn đơn giản )
+ - combinator selectors (bộ chọn tổ hợp )
+ - pseudo - elements selectors ( bộ chọn phần tử giả )
+ -psedo-class selectors (bộ chọn lớp giả )
+ - attribute selectors ( bộ chọn thuộc tính )
+ -->
+ <!--I. bộ chọn đơn giản 
+ 1. bộ chọn phần tử 
+ 2. bộ chọn nhóm 
+ 3.bộ chọn class -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <style>
+        .title-main {
+            color:blue;
+            font-size: 40px;
+            font-family:Arial;
+            font-weight:600;
+        }
+        .title-footer{
+        color:brown;
+        font-family:Arial ;
+        font-weight:100;
+        font-size: 20px;
+        }
+        .text-center{
+            text-align: center; /* căn giữa */
+        }
+    </style>
+    <h2 class="title-main text-center"> Khóa học 28 tech</h2> <!-- có thẻ áp dụng nhiều class-->
+    <h2 class="title-main"> Về 28 tech </h2>
+    <h2 class="title-main text-center">Danh mục nổi bật</h2>
+    
+    <footer>
+        <h2 class="title-footer">28 tech- Become A better developer</h2>
+        <h2 class="title-footer">Về 28 tech </h2>
+        <h2 class="title-footer">THông tin </h2>
+    </footer>
+ <!-- Bộ chọn nhóm 
+  .title-main , title-footer{
+  dùng chung đoạn css
+  } -->
+
+<!-- bộ chọn tôt hợp 
+ 1. bộ chọn con 
+ -->
+ <style>
+    div > p { /* áp dụng cho cấp con đầu tiên */
+          background-color:green;
+    }
+ </style>
+ <p>Nội dung 1 </p>
+ <div>
+    <p>Nội dung 2 </p> <!-- cấp con đầu tiên của thẻ div-->
+    <p>nội dung 3</p>
+     
+    <section>
+        <p>Nội dung section 1 </p> <!-- cấp con thứ hai của thẻ div-->
+        <p>Nội dùng section 2 </p>
+          <article>
+            <p>Nội dung article 1</p> <!-- cấp con thứ 3 của thẻ div-->
+            <p>Nội dung article 2</p>
+          </article>
+    </section>
+ </div>
+ <p>Nội dung 4 </p>
+ <h2>Nội dung thẻ h2</h2>
+ <p>Nội dung 5</p>
+ <p>Nội dung 6</p>
+ <!-- bộ chọn hậu duệ : ko quan tâm cấp cứ là con là đc..............................................--> 
+  <style>
+    div p {
+        background-color:yellow;
+    }
+  </style>
+  <p>Nội dung 1 </p>
+ <div>
+    <p>Nội dung 2 </p> <!-- cấp con đầu tiên của thẻ div-->
+    <p>nội dung 3</p>
+     
+    <section>
+        <p>Nội dung section 1 </p> <!-- cấp con thứ hai của thẻ div-->
+        <p>Nội dùng section 2 </p>
+          <article>
+            <p>Nội dung article 1</p> <!-- cấp con thứ 3 của thẻ div-->
+            <p>Nội dung article 2</p>
+          </article>
+    </section>
+ </div>
+ <p>Nội dung 4 </p>
+ <h2>Nội dung thẻ h2</h2>
+ <p>Nội dung 5</p>
+ <p>Nội dung 6</p>
+ </body>
+ </html>
