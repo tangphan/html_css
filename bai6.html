@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- bộ chọn phần tử giả
+     +, một số pseudo-element phổ biến :
+     :: before 
+     +, tạo một phần tử mới ở bên trong phần tử cha , và đứng ở vị trí đầu tiên -->
+     <style>
+        .menu-1 li::before{
+            content:"*";
+        }
+        .menu-2 li::before{
+            content:"$";
+        }
+        .menu-1 li::after{
+            content:"!"
+        }
+     </style>
+    <ul class="menu-1">
+        <li> Mục 1</li>
+        <li> Mục 1</li>
+        <li> Mục 1</li>
+        <li> Mục 1</li>
+        <li> Mục 1</li>
+        <li> Mục 1</li>
+
+    </ul>
+    <ul class="menu-2">
+        <li>+ Mục 1</li>
+        <li>+ Mục 1</li>
+        <li>+ Mục 1</li>
+        <li>+ Mục 1</li>
+        <li>+ Mục 1</li>
+        <li>+ Mục 1</li>
+    </ul>
+    <!-- :: after : tạo một phân tử mới bên trong phần tử cha , và đứng ở vị trí cuối cùng -->
+
+ <!--02. Pseudo-class selectors : bộ chọn lớp giả .............................................. 
+ Một số pseudo-class phổ biến :
+ :hover : +, chọn phần tử khi người dùng di chuột qua nó -->
+</body>
+</html>
