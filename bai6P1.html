@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--02. Pseudo-class selectors : bộ chọn lớp giả .............................................. 
+ Một số pseudo-class phổ biến :
+ :hover : +, chọn phần tử khi người dùng di chuột qua nó -->
+    <style>
+        .title {
+            background-color: brown;
+            color: aliceblue;
+        }
+
+        .title:hover {
+            /* khi di chuột vào nó sẽ đổi sang css khác */
+            background-color: black;
+            color: brown;
+        }
+
+        .link {
+            color: black;
+            text-decoration: none;
+            /*bỏ dấu gạch ngang dưới chân đi */
+            font-family: Arial;
+            font-weight: 600;
+        }
+
+        .link:hover {
+            color: yellow;
+        }
+    </style>
+    <h2 class="title">Nội dung thẻ h2</h2>
+
+    <a href="#" class="link">liên hệ</a>
+
+
+
+    <!-- :first-child : chọn phần tử con đầu tiên ở bên trong phần tử cha..................
+    -->
+    <!-- :last-child : chọn phần tử cuối cùng bên trong phần tử cha................... -->
+    <!-- :nth-child(an+b) : chọn phần tử có vị trí cụ thể trong phần tử cha .......
+ a, b : là những số biết trước 
+ n : là số nguyên dương tăng dần-->
+    <style>
+        ul li:first-child {
+            color: red;
+        }
+
+        ul li:last-child {
+            color: blueviolet;
+        }
+
+        ul li:nth-child(2) {
+            /*có thể chọn cố định */
+            color: brown;
+        }
+
+        ul li:nth-child(2n+3) {
+            /*n=0.1.2..-> ra css cho mục 3 5 7 9 */
+            color: blue;
+        }
+        table{
+            border: 1px solid #ddd;
+            border-collapse: collapse;
+        }
+        th , td {
+            border : 2px solid #ddd;
+            padding: 10px;
+        }
+        thead th{
+            background-color:aquamarine;
+            color:aliceblue
+        }
+        tbody tr:nth-child(2n+1) {
+            background-color:antiquewhite;
+        }
+         
+    </style>
+    <ul>
+        <li>Mục 1</li>
+        <li>Mục 2</li>
+        <li>Mục 3</li>
+        <li>Mục 4</li>
+        <li>Mục 5</li>
+        <li>Mục 6</li>
+        <li>Mục 7</li>
+        <li>Mục 8</li>
+        <li>Mục 9</li>
+        <li>Mục 10</li>
+    </ul>
+
+
+    <table >
+        <thead>
+            <tr>
+                <th>Item head</th>
+                <th>Item head</th>
+                <th>Item head</th>
+                <th>Item head </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Item body</td>
+                <td>Item body</td>
+                <td>Item body</td>
+                <td>Item body</td>
+
+            </tr>
+            <tr>
+                <td>Item body</td>
+                <td>Item body</td>
+                <td>Item body</td>
+                <td>Item body</td>
+
+            </tr>
+            <tr>
+                <td>Item body</td>
+                <td>Item body</td>
+                <td>Item body</td>
+                <td>Item body</td>
+
+            </tr>
+            <tr>
+                <td>Item body</td>
+                <td>Item body</td>
+                <td>Item body</td>
+                <td>Item body</td>
+
+            </tr>
+            <tr>
+                <td>Item body</td>
+                <td>Item body</td>
+                <td>Item body</td>
+                <td>Item body</td>
+
+            </tr>
+        </tbody>
+    </table>
+    <!-- attribute selectors : bộ chọn thuộc tính ...............
+     +, một số cách chọn phổ biến :
+     [attribute] : chọn tất cả các phần tử có thuộc tính attribute..........
+     +, [attribute="value" : chọn các phần tử có thuộc tính attribute có giá trị bằng value]--> 
+
+     <style>
+        .menu li a[target]{ /*chọn những phần tử có thuộc tính target*/
+            background-color:yellow;
+        }
+        .menu li a[target="_blank"]{ /*chọn những phần tử có thuộc tính target có value=blank*/
+            background-color:red;
+        }
+        .menu li a[href*="google.com"]{ /*chỉ cần có chữ google.com là sẽ được chọn*/
+           background-color:blueviolet;
+        }
+
+     </style>
+
+    <ul class="menu">
+        <li>
+            <a href ="https://www.google.com">google </a>
+        </li>
+        <li>
+            <a href="google-font.com">google fonts</a>
+        </li>
+        <li>
+            <a href="facebook.com" target="_blank">facebook</a>
+        </li>
+        <li>
+            <a href="youtube.com" target="_self">youtube</a>
+        </li>
+    </ul>
+</body>
+
+</html>
