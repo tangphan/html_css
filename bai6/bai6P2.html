@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 05. BOX model , content , padding ,border , margin
+     5.1 . Một phần tử trong html có thể đc coi là một cái hộp 
+     .Hộp này bao gồm có 4 thành phần :
+     Content (nội dùng)- là phần nội dung bên trong hộp
+     border(đường viền): đường viền của hộp
+     padding(phần đệm) là khoảng cách giữa nội dùng và đường viền
+     margin(lề)- là khoảng cách giữa các hộp -->
+
+    <!--5.2 Borders (đường viền)
+     là đường viền của hộp 
+     cú pháp :
+     border: [border-width] [border-style] [border-color] ;
+     +, border-width : độ dày của đường viền
+     +, border-style:kiểu của đường viền 
+       dotted:đường viền chấm 
+       dashed:đường viền nét đứt
+       solid : đường viền liền
+     +border-color:màu của đường viền,-->
+
+    <!--5.3 padding (phần đệm) : là khoảng cách giữa nội dung và đường viền 
+     cú pháp padding: top right bottom left-->
+
+    <!--5.4 margin : khoảng cách giữa các hộp
+     cú pháp margin: top right bottom left-->
+    <style>
+        * {
+            /*dấu * là áp dụng cho tất cả các phần tử của css */
+            box-sizing: border-box;
+        }
+
+        .box {
+            font-size: 40px;
+            border: 8px solid blue;
+            padding: 50px 80px 30px 20px;
+            margin: 30px 40px 50px 60px;
+            width: 300px;
+            height: 500px;
+
+        }
+
+        .box1 {
+            font-size: 40px;
+            border: 8px solid red;
+            border-radius: 15px;
+            padding: 50px 80px 30px 20px;
+
+        }
+        .box2{
+            font-size: 20px;
+            width:200px;
+            height:300px;
+            border: 8px solid red;
+            margin:20px ;
+            overflow: visible;
+        }
+    </style>
+
+    <div class="box">
+        Box
+    </div>
+    <div class="box1">
+        Box1
+    </div>
+
+    <!-- thuộc tính width , height
+      dùng để thiết lập chiều rộng (width) và chiều cao (height) cho 1 phần tử -->
+
+    <!--07. box sizing (kích thước hộp)-->
+
+    <!--08. đon vị chiều dài -->
+    <!--09. overflow (tràn ra )...............
+     Thuộc tính overflow được sử dụng để xác định cách xử lý nội dung khi vượt quá kích thuóc của phần tử
+     các giá trị sau cho thuộc tính overflow:
+     +,visible : hiển thị nội dung vượt quá kích thước  của phần tử 
+     +,hidden : ẩn nội dung vượt quá kích thuóc của phần tử 
+     +,scroll:hiển thị thanh cuộn di chuyển qua lại nội dung vượt quá kích thước của phần tử
+     +,auto: tự động hiển thị thanh cuộn nếu nội dung vượt quá kích thước của phần tử-->
+
+    <div class="box2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid laboriosam incidunt amet nesciunt tempore
+        error, minus in aspernatur consequuntur! Nemo commodi neque beatae quae animi quidem distinctio non soluta quam
+        at consequuntur quo consectetur, id officia sit rerum debitis, eveniet autem praesentium, similique odio!
+        Tempora consequuntur reiciendis cum, dicta veritatis, expedita provident tenetur harum nemo enim veniam in sint
+        molestiae ipsum. Rem repellat enim fugit praesentium necessitatibus accusamus blanditiis beatae, debitis earum
+        sequi asperiores magnam quibusdam repellendus deleniti. Vitae nemo, quod minima aliquam voluptas quibusdam
+        officiis rerum ea est saepe totam rem, placeat porro quisquam commodi unde deleniti fuga alias.
+    </div>
+
+
+</body>
+
+</html>
