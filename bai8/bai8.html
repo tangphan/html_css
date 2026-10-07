@@ -1,0 +1,86 @@
+<!--Flex box ...............
+flex box trong css là một công cụ mạnh mẽ dùng để xây dựng và điểu chỉnh bố cục linh hoạt của các phần tử trên trang web
+flex bõ có 2 thành phần 
+- phần tử cha ( dùng để bọc bên ngoài)
+- các phần tử con 
+
+- dispaly flex ...............
+display flex giúp sắp xếp các phần tử một cahc dễ dàng , linh hoạt hơn trước
+cú pháp 
+.phan-tu-cha {
+display : giá trị ;
+}
+
+- các giá trị L
+flex : giúp các phần tử con hiển thị linh hoạt.
+phần tử cha có chiều rộng là 100%
+
+inline-flex: giúp các phần tử con hiển thị linh hoạt.
+phần tử cha có chiều rộng bằng chiều rộng của các phần tử con bên trong cộng lại -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .parent{
+            background: #7C4991;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction : row;
+        }
+        .child{
+            background-color: #F7941F;
+            border: 3px solid #fff;
+            padding: 10px;
+            margin : 5px;
+            font-size: 28px;
+            color: #000;
+            border-radius : 5px;
+            text-align : center;
+            width: 150px;
+        }
+    </style>
+   <div class="parent">
+     <div class="child">Phần tử 1</div>
+     <div class="child">Phần tử 2</div>
+     <div class="child">Phần tử 4</div>
+     <div class="child">Phần tử 5</div>
+     <div class="child">Phần tử 6</div>
+     <div class="child">Phần tử 7</div>
+   </div> 
+   <!--flex direction : thuộc tính display direction đùng để xác định hướng của các phần tử con được hiển thị .
+   cú pháp 
+   .phan-tu-cha {
+   display: giá trị ;
+   flex-direction: giá trị ;
+   }
+   - các giá trị : 
+   +, row : giá trị mặc định . Các phần tử con được sắp xếp theo hướng từ trái sang phải .
+   +, row-reverse : các phần tử con được sắp xếp theo hướng từ phải sang trái 
+   +, column : các phần tử con được sắp xếp theo hướng từ trên xuống dưới.
+   +, column-reverse: các phần tử con được sắp xếp theo hướng từ dưới lên trên
+   -->
+
+
+   <!-- flex wrap
+    + thuộc tính flex-wrap dùng đê xác định các phần tử con có tự động xuống hàng khi hết chiều ngnag hay không.
+    +, cú pháp :
+    .phan-tu-cha {
+    display : giá trị ;
+    flex-wrap : giá trị ;
+    } 
+    +, các giá trị :
+    nowrap : giá trị mặc định , các phần tử con luôn nằm trên một hàng
+    wrap : các phần tử con tự động xuống hàng khi hết chiều ngang
+    wrap-reverse : tương tự như wrap.
+    các phần tử con tự động thêm hàng mới lên trên-->
+</body>
+</html>
