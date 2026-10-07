@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--01.Position (vị trí)
+    - thuộc tính position được sử dụng để xác định vị trí của một phần tử trên trang web
+    - có 5 giá trị :
+     relative : tương đối  hay dùng
+     static : tĩnh
+     absolute: tuyệt đối   jay dùng
+     fixed : cố định
+     sticky : tương đối
+
+
+     I. relative :
+     vị trí tương đối so với vị trí mặc định của chính nó
+     sử dụng được các thuộc tính top ,right , bottom ,left
+     
+    -->
+     <style>
+        .box{
+            background : yellow;
+            border : 3px solid black;
+            display : inline-block;
+            padding : 50px;
+            font-size: 40px;
+            font-weight: 700;
+        }
+        .box-2 {
+            position : relative;
+            top: 50px;
+            left: 80px;
+        }
+        .box-4{
+            background: yellow;
+            border : 5px solid black;
+            width: 500px;
+            height: 400px;
+            position: relative;
+        }
+        .box-5 {
+            background: red;
+            border: 5px solid blue;
+            width: 120px;
+            height:120px;
+            position : absolute;
+            top:50px;
+            right:80px;
+        }
+     </style>
+     <div class="box">
+       Box 1
+     </div>
+     <div class ="box box-2">
+        Box 2
+     </div>
+     <div class="box">
+        Box 3
+     </div>
+
+     <!-- II. stactic : (tĩnh)
+      - vị trí luôn cố định so với vị trí mặc định của chính nó 
+      - không sử dụng được các thuộc tính top , bottom , right , left-->
+
+    <!-- absolute : tuyệt đối 
+     vị trí tuyệt đối so với phần tử bao ngoài (phần chử cha - có positio khác static)
+     sử dụng các thuộc tính top , right , bottom , left-->
+
+    <div class="box-4">
+        <div class="box-5"></div>
+    </div>
+</body>
+</html>

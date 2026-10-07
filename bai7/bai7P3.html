@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--03. variables (biến)
+    -đặt tên biến để tái sử dụng được 1 giá trị ở nhiều nơi
+    - cú pháp khai báo 
+    : root {
+    --ten-bien-1:giá trị 1;
+    --ten-bien-2: giá trị 2;
+    }
+    cú pháp sử dụng :
+    selector {
+    thuoc-tinh-a:var(--ten-bien-1);
+    thuoc-tinh-b: var(--ten-bien-2);
+    }-->
+    <style>
+        :root{
+            --color-main:red;
+        }
+        .title-main {
+            color: var(--color-main)
+        }
+
+        .title-sub {
+            color: var(--color-main)
+        }
+        .text-orange{
+            color:white;;
+            background-color: var(--color-main)
+        }
+    </style>
+
+
+    <h1 class="title-main">lorem.....</h1>
+    <h2 clas="title-sub">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ex maxime ratione?</h2>
+    <h2 clas="title-sub">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ex maxime ratione?</h2>
+    <h2 clas="title-sub">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ex maxime ratione?</h2>
+    <h2 clas="title-sub">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ex maxime ratione?</h2>
+    <p class="text-orange">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quod at minima quasi sunt
+        delectus, provident suscipit similique molestiae fuga? Labore nobis ut sed assumenda ullam suscipit rerum
+        doloribus architecto delectus optio omnis accusantium neque quod non exercitationem sunt cupiditate rem soluta
+        officia quisquam, accusamus repellendus eum. Accusantium hic minima incidunt deleniti qui corrupti est! Labore
+        qui alias illum totam quos, earum quibusdam corporis, ratione commodi unde laboriosam omnis? In alias
+        consequuntur odio dolorem nulla, culpa modi, ab, odit illo recusandae aspernatur inventore sequi ipsam tempora
+        dicta aliquid optio eum. Alias dolore reiciendis deleniti maxime impedit similique, aliquam quo rerum.</p>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 10. display (kiểu hiện thị )
+     display : inline ;
+     - không đặt được chiều rộng và chiều cao 
+     -không thêm được margin và padding cho bên trên và bên dưới 
+     display : block ;
+     -chiều rộng kéo dài từ trái sang phải , luôn bắt đầu ở 1 hàng mới
+     -cho phép đặt chiều rộng và chiều cao 
+     -cho phép đặt margin , padding cho cả 4 phía 
+     display : inline-block:
+     -chiều rộng ,mặc định bằng chiều rộng của phần tử 
+     - không bắt đầu ở hàng mới
+     -cho phép đặt chiều rộng và chiều cao
+     -cho phép đặt margin , padding cho cả 4 phía
+     display:none : ẩn phần tử hoàn toàn màn hình-->
+     <style>
+        * {
+         box-sizing:border-box;
+        }
+        span {
+            background:yellow;
+            border:2px solid black;
+        }
+        .inline {
+            display: inline ;
+            margin-top: 60px; /* ko đc vì ko áp dụng cho trên dưới */
+            margin-right:40px;
+
+        }
+        .block {
+            display: block; /* 1 mình 1 hàng  luôn bắt đầu hàng mới */
+            width :200px;
+        }
+        .inline-block {
+            display :inline-block; /* 1ko bắt đầu ở hàng mới */
+            width : 200px;
+            height : 80px;
+            margin-top:20px;
+        }
+        .display-none{
+            display:none;
+        }
+        .menu li ul {
+            display :none;
+        }
+        .menu li:hover ul {
+            display: block;
+        }
+
+     </style>
+     <h2> 1. display :inline ;</h2> <!-- chiều rộng của nó bằng chiều rộng của nội dung -->
+     <p>
+        xin chào <span class="inline">Đặng Phương Nam </span>BẠn có khỏe không?
+     </p>
+     <h2>2.display: block;</h2>
+     <p>xin chào <span class="block">mxcnxcmnxcxmnc</span>cxcnxcmxcnxmcmxcmn</p>
+     <h2>3.display :inline-block;</h2>
+     <p>
+        xin chào <span class="inline-block">sjfhdjdfhdjhf</span>xcbvncvncvbcv
+     </p>
+     <h2>4. display :none;</h2>
+     <p>djfkjdfdk<span class="display-none">xcvjvhcjvchv</span></p>
+
+
+     <ul class="menu">
+        <li>
+            Mục 1
+             <ul>
+                <li>Mục 1 -1</li>
+                <li>Mục 1 -2</li>
+                <li>Mục 1 -3</li>
+             </ul>
+        </li>
+        <li>
+            Mục 2
+             <ul>
+                <li>Mục 2-1</li>
+                <li>Mục 2-2</li>
+                <li>Mục 2-3</li>
+             </ul>
+        </li>
+        <li>
+            Mục 3
+        </li>
+        <li>Mục 4</li>
+        <li>Mục 5</li>
+     </ul>
+</body>
+</html>
