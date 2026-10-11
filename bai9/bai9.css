@@ -67,3 +67,34 @@
     grid-row: span 2;
 }
 
+/* ví dụ 5 */
+.child5 {
+    background : orange;
+    color:black;
+    font-size: 24px;
+    font-weight : 700;
+    padding:20px;
+    border : 1px solid black;
+    text-align : center;
+}
+.box {
+    background: orangered;
+    color: white;
+    font-size:20 px;
+    padding : 10px;
+    border : 1px solid white;
+}
+.parent5 {
+    display : grid;
+    gap : 10px;
+    grid-template-columns: 1fr 1fr;
+}
+.child5:nth-child(4){
+    display : grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr ;
+}
+.child5:nth-child(4) .box:nth-child(1) {
+    grid-column: span 2;
+}
+
