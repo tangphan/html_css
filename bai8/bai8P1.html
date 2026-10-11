@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--4.5 .justify content..........................................
+    thuộc tính justify content dùng để điều chỉnh vị trí các phần tử con theo 
+    hướng trục chính ( hướng của flex-diretion)
+    cú pháp 
+    .phan-tu-cha {
+    display : giá trị ;
+    flex-direction : giá trị ;
+    justify-content : giá trị ;
+    }  .......
+    +, Các giá trị :
+    -flex-start : giá trị mặc định , các phần tử con được căn về phía dầu trục chính
+   - flex-end : các phần tử con được căn về phía cuối trục chính
+   - center : các phần tử con được căn giữa trục chính
+   - space-betwwen : các phần tử con có khoảng cách đều nhau , phần tử con đầu tiên 
+    vad cuối cùng sẽ sát với lề phần tử cha 
+   - space-around : các phần tử con có khoảng cách đều nhau khoảng cách giữa phần
+    tử với lề =1/2 khoảng cách giữa phần tử với phần tử
+   - space-evenly : các phần tử con có khoảng cách đều nhau , khoảng cách giũa
+   các phần tử với lề = khoảng cách giâuwx phần tử với phần tử
+   
+    -->
+
+    <style>
+        
+        * {
+            box-sizing: border-box;
+        }
+
+        .parent {
+            background: #7C4991;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content:space-around;
+            height : 300px;
+            align-items : flex-start;
+        }
+
+        .child {
+            background-color: #F7941F;
+            border: 3px solid #fff;
+            padding: 10px;
+            margin: 5px;
+            font-size: 28px;
+            color: #000;
+            border-radius: 5px;
+            text-align: center;
+            width: 150px;
+        }
+        .child:nth-child(2) {
+            align-self:stretch;
+            order:1;
+        }
+        .child:nth-child(3) {
+            order:0;
+        }
+        .child:nth-child(1){
+            order:2
+        }
+         
+    </style>
+     <div class="parent">
+        <div class="child">Phần tử 1</div>
+        <div class="child">Phần tử 2</div>
+        <div class="child">Phần tử 3</div>
+         </div>
+
+    <!--4.6  align items.....................................................
+    +, thuộc tính align-items dùng để điều chỉnh vị trí của các phần tử theo hướng trục
+    phụ (vuông góc với hướng của flex-direction )
+    +, dùng để điều chỉnh cho một dòng .
+    cú pháp : 
+    .phan-tu-cha {
+    display : giá trị ;
+    flex-direction : giá trị ;
+    align-items : giá trị ;
+    }
+
+    CÁC GIÁ TRỊ :
+    +, stretch : giá trị mặc định , Các phần tử con tự động tăng chiều cao để lấp đầy
+    chiều cao của phần tử cha .
+    LƯU Ý : nếu các phần tử con có thuộc tính height thì sẽ ưu tiên hơn
+
+    +, flex-start : các phần tử con được căn về phía đầu trục phụ
+    
+    +, flex-end : các phần tử con được căn về phía cuối trục phụ 
+    
+    +, center : các phần tử con được căn giữa trục phụ
+
+     4.7 . Align content ....................................................
+     - tương tự align-items nhưng áp dụng cho nhiều dòng
+     - cú pháp :
+     .phan-tu-cha {
+     display : giá trị ;
+     flex-direction : giá trị ;
+     align-content : giá trị ;
+     }
+
+     CÁC GIÁ TRỊ : stretch : giá trị mặc định , các phần tử tự động tăng chiều cao để 
+     lấp đầy chiều cao của phần tử cha .
+     lưu ý : nếu các phần tử con có height thì sẽ ưu tiên hơn 
+
+     +, flex-start : các phần tử con được căn về phía đầu trục phụ 
+
+     +, flex-end : các phần tử con đươc căn về phía cuối trục phụ 
+
+     +, center : các phần tử con được căn giữa trục phụ
+
+     +, space-between : các phần tử con có khoảng cách đều nhau , phần tử con đầu 
+     tiên và cuối cùng sẽ sát với lề của phần tử cha .
+
+     +, space-around : các phần tử con có khoảng cách đều nhau , khoảng cách 
+     giữa phần tử với lề =1/2 khoảng cách giữa phần tử với phần tử.
+
+
+     4.8 . Align self 
+     - Tương tự align-items nhưng áp dụng 1 phần tử con cụ thể
+     - thuộc tính align-self có thể được sử dụng để ghi đè giá trị của align-items.
+     cú pháp :
+     .phan-tu-con-cu-the{
+     align-self : giá-trị;
+     }
+
+     CÁC GIÁ TRỊ :
+     -auto : giá trị mặc định, phần tử con cụ thể được kế thừa giá trị của align-items.
+     -stretch: phần tử con cụ thể tự động tăng chiều cao để lấp dầy chiều cao của phần tử cha . 
+     LUU Ý : nếu có thuộc tính height thì sẽ ưu tiên hơn 
+     -flex-start : phần tử con cụ thể được căn về phía đầu trục phụ 
+     -flex-end : phần tử con cụ thể được căn về phía cuối trục phụ
+     -center: phần tử con được căn giữa trục phụ
+
+     4.9. Order :
+     - thuộc tính order dùng để xác định thứ tự xuất hiện của một phần tử con .
+     cú pháp :
+     .phan-tu-con-cu-the {
+     order : giá trị ;
+     }
+     giá trị mặc định =0;
+     giá trị của order là một số nguyên >=0;
+    -->
+</body>
+</html>
