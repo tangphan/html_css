@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+:root {
+    --font-1: "Be Vietnam Pro", sans-serif;
+    /*đặt tên cho biến font 1 */
+    --font-2: "Lora", serif;
+    /*đặt tên cho biến font 2 */
+
+    --color-one: #333333;
+    /* đặt tên cho biến màu 1 */
+    --color-two: #E2E2E2;
+    /* đặt tên cho biến màu 2 */
+    --color-three: #F1F1F1;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+}
+
+.box {
+    /* áp dụng cho nhiều phần */
+    background-color: var(--color-two);
+    border-radius: 8px;
+    font-family: var(--font-1);
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--color-one);
+    display: flex;
+    justify-content: center; /*căn giữa theo chiều ngang */
+    align-items: center;
+}
+
+.container {
+    /* phần khung có thể áp dụng cho nhiều nơi */
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header {
+
+    padding: 20px 0;
+
+}
+
+.header .inner-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+}
+
+.header .inner-logo {
+    width: 200px;
+    height: 60px;
+
+}
+
+.header .inner-menu {
+
+    height: 34px;
+    flex: 1
+        /*ko fix cứng chiều rộng cho menu vì có thể thay đổi */
+
+}
+
+.header .inner-button {
+    width: 120px;
+    height: 42px;
+
+}
+/* section 1 */
+.section-1 {
+    background-color: var(--color-three);
+    padding: 80px 0;
+}
+.section-1 .inner-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 30px;
+}
+.section-1 .inner-content {
+    height: 520px;
+}
+.section-1 .inner-image {
+    height: 520px;
+}

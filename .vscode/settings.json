@@ -1,3 +1,4 @@
 {
-    "livePreview.defaultPreviewPath": "/bai5.html"
+    "livePreview.defaultPreviewPath": "/bai5.html",
+    "liveServer.settings.port": 5501
 }
