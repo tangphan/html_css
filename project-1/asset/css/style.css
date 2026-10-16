@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lexend+Deca:wght@100..900&family=Playwrite+BE+WAL+Guides&family=Playwrite+CU+Guides&display=swap');
+
+* {
+    font-family: "Lexend Deca", sans-serif;
+    box-sizing :border-box;
+}
+
+:root {
+    --color-primary: #4502C7;
+}
+
+body {
+    margin: 0;
+    background-color: #F8F8F8;
+}
+
+a {
+    text-decoration :none;
+}
+
+/* coitainer */
+.container {
+    width: 1184px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 1199.98px) {
+    .container {
+        width: 960px;
+
+    }
+}
+
+@media (max-width: 991.98px) {
+    .container {
+        width: 720px;
+    }
+}
+@media (max-width: 767.98px){
+    .container {
+        width: 540px;
+    }
+}
+@media (max-width: 575.98px){
+    .container {
+        width: 100% ;
+        padding-left:15px;
+        padding-right:15px;
+    }
+}
+
+/* top-header */
+.top-header {
+    background-color: var(--color-primary);
+    padding: 10px 0;
+}
+@media (max-width: 767.98px){
+    .top-header {
+        display:none;
+    }
+}
+
+.top-header .inner-wrap {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px 40px;
+}
+
+.top-header .inner-item {
+    color: #FFFBEB;
+    font-weight: 400;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.top-header .inner-item i {
+    font-size: 20px;
+}
+
+/*header */
+.header {
+    background-color: #FFFFFF;
+    padding: 12px 0;
+}
+.header .inner-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .inner-logo img {
+     height: 50px;
+     width: auto;
+}
+.header .inner-menu ul {
+    display : flex;
+    padding : 0;
+    margin: 0;
+    list-style : none ;
+    gap: 5px 40px;
+}
+.header .inner-menu ul li a {
+    font-weight: 500;
+    font-size: 16px;
+    color: #25282B;
+    text-transform: capitatalize;
+}
+.header .inner-menu ul li a.active ,
+.header .inner-menu ul li a:hover {
+    color: var(--color-primary);   /* bôi tím riêng thẻ có class active */
+}
+
+.header .inner-cart a {
+    display: inline-flex;
+    align-items: center;
+}
+.header .inner-cart i {
+    height: 26px;
+    width :auto;
+}
+.header .inner-cart span {
+    background-color: #FF3904;
+    display: inline-block;
+    border-radius: 3px;
+    color : #FFFFFF;
+    font-weight: 400;
+    font-size: 15px;
+}
