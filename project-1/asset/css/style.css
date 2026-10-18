@@ -94,21 +94,53 @@ a {
      height: 50px;
      width: auto;
 }
-.header .inner-menu ul {
+.header .inner-menu > ul {
     display : flex;
     padding : 0;
     margin: 0;
     list-style : none ;
     gap: 5px 40px;
 }
-.header .inner-menu ul li a {
+.header .inner-menu > ul > li {
+    position: relative;
+}
+.header .inner-menu > ul > li > ul {
+  position: absolute;
+  top: 100%;
+  left :0;
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+  background-color: #fff;
+  border-radius: 0 0 10px 10px; /* topleft topright bottomright bottomleft */
+  width: 280px;
+  z-index: 999;
+  display:none;
+}
+.header .inner-menu > ul > li:hover > ul {
+  display: block;
+}
+.header .inner-menu > ul > li > ul > li > a {
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--color-primary);
+    padding: 8px 22px;
+    display: block;
+    text-transform: capitalize;
+}
+.header .inner-menu > ul > li > ul > li > a.active,
+.header .inner-menu > ul > li > ul > li > a:hover {
+    background-color: var(--color-primary);
+    color: #fff;
+}
+.header .inner-menu > ul > li > a {
     font-weight: 500;
     font-size: 16px;
     color: #25282B;
     text-transform: capitatalize;
 }
-.header .inner-menu ul li a.active ,
-.header .inner-menu ul li a:hover {
+.header .inner-menu > ul > li > a.active ,
+.header .inner-menu > ul > li > a:hover {
     color: var(--color-primary);   /* bôi tím riêng thẻ có class active */
 }
 
@@ -127,4 +159,44 @@ a {
     color : #FFFFFF;
     font-weight: 400;
     font-size: 15px;
+    padding : 1px 7px;
+    position: relative;
+     margin-left:5px;
+}
+.header .inner-cart span::before {
+  content: "";
+  display:inline-block;
+  width: 0; 
+  height: 0; 
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent; 
+  border-right:7px solid #FF3904; 
+  position: absolute;
+  top: 5.5px;
+  left: -3.6px;
+ 
+}
+.header .inner-menu-mobile {
+    display:none;
+}
+
+/* reponsive header */
+@media (max-width: 1199.98px) {
+ .header .inner-menu > ul {
+    gap : 5px 24px;
+ }
+}
+@media (max-width: 991.98px) {
+ .header  .inner-menu {
+    display: none;
+ }
+ .header .inner-menu-mobile {
+    display: inline-flex;
+    font-size: 22px;
+    color: #252828;
+    background-color: transparent;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+ }
 }
