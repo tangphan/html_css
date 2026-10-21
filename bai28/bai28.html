@@ -1,0 +1,82 @@
+<!-- 1. layout
+ 1.1 aspect radio : tỉ lệ 
+ class                   thuộc tính
+ aspect-auto             aspect-ratio:auto  // mặc định 
+ aspect-sqaure           aspect-ratio: 1/1 // tỉ lệ hình vuông
+ aspect-video            aspect-ratio:16/9; // tỉ lệ chuẩn video
+ aspect-[width/height]   aspect-ratio: width/height;
+
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+ </head>
+ <body>
+    <div class="text-[30px] border-[8px] border-[#F47F20] aspect-[4/3] ">
+      Box 4
+    </div>
+
+<!-- 1.2 container 
+ class           điểm ngắt       thuộc tính
+ container       None            width:100%;  
+          
+ -->
+ <div class="container bg-orange-500 mx-auto my-10">container</div>
+
+
+<!-- display 
+ class             thuộc tính 
+ block             display: block //chiếm toàn bộ chiều rộng có sẵn trong khung chứa
+                                    luôn bắt đầu từ 1 dòng mới 
+                                    tự động xuống dòng 
+                                    cho phép tùy chỉnh đầy đủ chiều rộng chiều cao
+ inline-block      display: inline-block // cho phép phần tử hiện thị trên cùng 1 dòng vs phần tử khác
+                                             cho phép thiết lập chiều rộng chiều cao
+ inline            display: inline
+ flex              display: flex 
+ inline-flex       display: inline-flex 
+ hidden            display: none 
+ -->
+
+ <!-- 1.4 object fit
+  
+ class                   thuộc tính
+ object-contain          object-fit:contain  // hình ảnh video sẽ được tự động thu phóng
+                                                sao cho vừa vặn hoàn toàn bên trong khung chứa
+                                                mà vẫn giữ nguyên tỉ lệ gốc 
+ object-cover            object-fit:cover
+ object-none             object-fit:none-->
+
+
+ <!--1.5 Overflow
+ class                 thuộc tính 
+ overflow-visible      overflow:visible // mặc định
+ overflow-hidden       overflow:hidden // ẳn các nội dung bị tràn ra ngoài
+ overflow-scroll       overflow:scroll // hiển thị thanh scroll
+ overflow-auto         overflow-auto: khi nào nội dung vượt quá mới hiển thị thanh scroll -->
+
+
+ <!--1.6  position 
+ class                thuộc tính
+ fixed                 position:fixed;  // đứng yên 1 chỗ khi cuộn trang web
+ absolute              position:absoluted // định vị theo phần tử cha gần nhất
+ relative              position:relative 
+ sticky                position:sticky
+  -->
+
+<!-- 1.7 top/right/bottom /left
+ class              thuộc tính
+ top-[value]        top:value
+ right-[value]
+ bottom-[value]
+ left-[value]
+-->
+
+<div class="w-[400px] aspect-square boder-[5px] boder-black"></div>
+ </body>
+ </html>
