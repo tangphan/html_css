@@ -77,6 +77,56 @@
  left-[value]
 -->
 
-<div class="w-[400px] aspect-square boder-[5px] boder-black"></div>
+<div class="w-[400px] aspect-square border-[5px] border-black relative">
+  <div class="w-[100px] aspect-square border-[5px] border-[#D00] absolute top-[20px] right-[20px]"></div>
+</div>
+
+
+<!--1.8 Z-index // để khi các phần tử trùng vị trí thì ưu tiền phần tử nào
+z-[value]
+-->
+
+<!-- flex box-->
+
+<!-- 2.1 flex direction 
+ class                   thuộc tính 
+ flex-row                flex-direction: row // mặc định
+ flex-row-reverse        flex-diẻction:row-reverse
+ flex-col                flex-direction:column
+ flex-col-reverse         flex-direction:column-reverse-->
+ <div class="w-[600px] aspect-square bg-orange-300 flex gap-x-[20px] gap-y-[10px] flex-row flex-wrap justify-between items-stretch">
+   <div class="w-[100px] h-[60px] bg-orange-800 text-white order-[1]">1</div>
+   <div class="w-[100px] h-[60px] bg-orange-800 text-white order-[3]">2</div>
+   <div class="w-[100px] h-[60px] bg-orange-800 text-white order-[0]">3</div>
+   
+   <div class="w-[100px] h-[60px] bg-orange-800 text-white order-[5]">4</div>
+   <div class="w-[100px] h-[60px] bg-orange-800 text-white order-[4]">5</div>
+ </div>
+<!-- 2.2 flex wrap
+ class                   thuộc tính
+ flex-wrap               flex-wrap: wrap // cho phép các phần tử ngắt dòng và chuyển xuống dòng mới nếu không đủ chỗ trên 1 dòng
+ flex-nowrap             flex-wrap:nowrap;  // mặc định nằm trên 1 dòng duy nhất , có thể bị co lại nếu vượt quá kích thước--> 
+
+ <!-- 2.3 order -----------------------------
+  oder-[value]    // sắp xếp lại thứ tự hiển thị của các phần tử con-->   
+
+
+<!--2.4  justify content
+class                         thuộc tính
+justify-start                 justify-content:flex-start // căn các phần tử về phía đầu của trục chính
+justify-end                   justify-content:flex-end // căn các phần tử về phía điểm kết thúc của trục chính
+justify-center                justify-content:center // căn các phần tử vào chính giữa của trục chính
+justify-between               justify-content:space-between  // khoảng cách giữa các phần tử bằng nhau hai phần tử cuối và đầu sát mép 
+justify-around                justify-content:space-around // khoảng cách giữa hai phần tử liền kề lớn gấp đôi khoảng cách từ phần tử đến mép ngoài 
+justify-evenly                justify-content:space-evenly // khoảng cách giữa các phần tử bằng nhau --> 
+
+<!--2.5  align -items
+class                              thuộc tính
+items-start                        align-items:flex-start     // căn các phần tử về phía điểm bắt đầu với trục vuông góc 
+items-end                          align-items:flex-end     // căn các phần tử về phía điểm kết thúc của trục vuông góc
+items-center                       align-items:center    // căn các phần tử vào chính giữa theo trục vuông goca
+items-stretch                      align-items:stretch   // kéo giãn các phần tử cho kín chiều cao chiều rộng của khung chứa tùy theo trục-->   
+
+
  </body>
  </html>
