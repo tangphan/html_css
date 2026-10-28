@@ -1,0 +1,58 @@
+<!-- 03.GRID --------------------------------------------
+ 3.1 grid template columns 
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+ </head>
+ <body>
+    <div class="w-[500px] h-[200px] bg-orange-300 grid grid-cols-3 gap-x-[20px] gap-y-[10px] ">
+        <div class="bg-orange-800 text-[25px] text-while opacity-[0.5] ">1</div>
+        <div class="bg-orange-800 text-[25px] text-while col-span-2 ">2</div>
+        <div class="bg-orange-800 text-[25px] text-while col-span-2 ">3</div>
+         <div class="bg-orange-800 text-[25px] text-while row-span-2 ">4</div>
+        <div class="bg-orange-800 text-[25px] text-while col-span-2">5</div>
+        <div class="bg-orange-800 text-[25px] text-while ">6</div>
+    </div>
+
+<!-- grid column start/end
+ class                      thuộc tính
+ col-span-1                 rộng 1 cột 
+ col-span-2                 rộng 2 cột 
+ col-span-n                  rộng n cột-->
+
+ <!-- row-span : chiếm bao nhiêu hàng 
+  class                 thuộc tính
+  row-span-1            cao 1 hàng 
+  row-span-2            cao 2 hàng 
+  ............................
+  row-span-11          cao 11 hàng 
+  row-span-12          cao 12 hàng-->
+
+
+  <!-- 4.  opacity : độ mờ 
+   class                      thuộc tính
+   opacity-[0.value]            opacity:0.value-->
+
+<!-- 5.responsive design
+ điểm ngắt            chiều rộng tối thiểu             css
+ sm                    640px                         @media(min-width:640px){....}
+ md                    768px           
+ lg                    1024px
+ xl                    1280px
+ 2xl                   1536px
+ -->
+ <div class="bg-orange-300 grid grid-cols-6 gap-[10px] p-[10px] mt-[20px]">
+    <div class="bg-orange-800 text-[25px] text-while">1</div>
+    <div class="bg-orange-800 text-[25px] text-while">2</div>
+    <div class="bg-orange-800 text-[25px] text-while">3</div>
+    <div class="bg-orange-800 text-[25px] text-while">4</div>
+    <div class="bg-orange-800 text-[25px] text-while">5</div>
+    <div class="bg-orange-800 text-[25px] text-while">6</div>
+ </div>
+ </body>
+ </html>
