@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Font Awesome CDN (Free v6.x) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="tailwind.config.js"></script>
+</head>
+
+<body>
+    <!-- header ----------------------------------->
+    <header class="bg-[#000071] py-[15px]">
+        <div class="container mx-auto px-[16px]">
+            <!-- wrap-->
+            <div class="flex items-center justify-between">
+                <!-- logo-->
+                <a href="#" class="text-white font-[800] text-[28px] lg:flex-none flex-1">28.ITjobs</a>
+                <!--menu-->
+                <nav class="lg:block hidden">
+                    <ul class="flex gap-x-[30px]">
+                        <li class="inline-flex items-center gap-x-[8px] relative group/sub-1">
+                            <a href="#" class="font-[600] text-[16px] text-white">Việc làm IT</a>
+                            <i class="fa-solid fa-chevron-down text-white text-[16px]"></i>
+                            <ul class="absolute top-[100%] left-[0] w-[280px] bg-[#000065] hidden group-hover/sub-1:block">
+                                <li class="py-[10px] px-[16px] rounded-[4px] flex items-center justify-between hover:bg-[#000096]">
+                                  
+                                    <a href="#" class="font-[600] text-[16px] text-white">
+                                        Việc làm IT theo kĩ năngv
+                                    </a>
+                                    <i class="fa-solid fa-chevron-right text-white text-[16px]"></i>
+                                </li>
+                                <li class="py-[10px] px-[16px] rounded-[4px] flex items-center justify-between hover:bg-[#000096]">
+                                    <a href="#" class="font-[600] text-[16px] text-white">
+                                        Việc làm IT theo công ty
+                                    </a>
+                                    <i class="fa-solid fa-chevron-right text-white text-[16px]"></i>
+                                </li>
+                                <li class="py-[10px] px-[16px] rounded-[4px] flex items-center justify-between hover:bg-[#000096]">
+                                    <a href="#" class="font-[600] text-[16px] text-white">
+                                        Việc làm IT theo thành phố
+                                    </a>
+                                    <i class="fa-solid fa-chevron-right text-white text-[16px]"></i>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="inline-flex items-center gap-x-[8px]">
+                            <a href="#" class="font-[600] text-[16px] text-white">Top Công Ty IT</a>
+                            <i class="fa-solid fa-chevron-down text-white text-[16px]"></i>
+                        </li>
+                        <li class="inline-flex items-center gap-x-[8px]">
+                            <a href="#" class="font-[600] text-[16px] text-white">Nhà tuyển dụng</a>
+                            <i class="fa-solid fa-chevron-down text-white text-[16px]"></i>
+                        </li>
+                    </ul>
+                </nav>
+                <!--account-->
+                <div class="inline-flex items-center-gap-x-[5px] text-white font-[600] text-[16px]">
+                    <a href="#" class="">Đăng nhập</a>
+                    <span class="">/</span>
+                    <a href="#" class="">Đăng ký</a>
+                </div>
+                <!--button menu mobiles-->
+                <button class="text-white text-[20px] ml-[12px] lg:hidden inline-block">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <!-- end account-->
+            </div>
+        </div>
+    </header>
+    <!-- end header------------------------------------>
+</body>
+
+</html>
